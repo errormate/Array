@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+long long int t,n,a[1000000],sum=0,m,mi;
+cin>>t;
+for(int i=0;i<t;i++)//m=min, mi=minimum index
+{sum=0;
+    cin>>n;
+    for(int j=0;j<n;j++)
+    
+      
+    cin>>a[j];
+    long long int k=n;
+    while(k>0)
+    {m=a[0];mi=0;
+        for(int j=1;j<k;j++)
+     {
+        if(a[j]<m)
+        {m=a[j];mi=j;}
+     }
+     sum=sum+(k-mi)*m;
+     k=mi;
+    }
+    
+    cout<<sum<<"\n";
+}
+  
+  return 0;
+}
+ 
